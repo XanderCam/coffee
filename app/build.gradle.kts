@@ -18,9 +18,6 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
     }
 
     buildTypes {
@@ -40,17 +37,7 @@ android {
         jvmTarget = "17"
     }
     buildFeatures {
-        compose = true
         viewBinding = true
-        dataBinding = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.7"
-    }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
     }
 }
 
@@ -65,6 +52,7 @@ dependencies {
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.recyclerview:recyclerview:1.3.1")
+    implementation("com.github.bumptech.glide:glide:4.15.1")
     
     // Architecture Components
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
@@ -84,19 +72,6 @@ dependencies {
     implementation("com.spotify.android:auth:2.0.2")
     implementation("com.spotify.android:app-remote:0.8.0")
 
-    // UI Components
-    implementation("com.github.bumptech.glide:glide:4.15.1")
-    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
-    implementation("androidx.compose.ui:ui:1.4.3")
-    implementation("androidx.compose.material:material:1.4.3")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
-    implementation("androidx.activity:activity-compose:1.7.2")
-
-    // Testing
+    // Testing (minimal)
     testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.4.3")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.4.3")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.4.3")
 }
