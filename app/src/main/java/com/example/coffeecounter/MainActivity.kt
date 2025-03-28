@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.coffeecounter.databinding.ActivityMainBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -57,6 +58,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showTauntDialog(taunt: String) {
-        // Implementation for showing taunt dialog
+        MaterialAlertDialogBuilder(this)
+            .setTitle("Whoa there!")
+            .setMessage(taunt)
+            .setPositiveButton("OK") { dialog, _ -> 
+                dialog.dismiss()
+            }
+            .setNegativeButton("Add more!") { dialog, _ ->
+                viewModel.addCup()
+                dialog.dismiss()
+            }
+            .show()
     }
 }

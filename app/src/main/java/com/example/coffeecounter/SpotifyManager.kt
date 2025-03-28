@@ -7,7 +7,7 @@ import com.spotify.android.appremote.api.SpotifyAppRemote
 import com.spotify.protocol.types.Track
 
 object SpotifyManager {
-    private const val CLIENT_ID = "YOUR_SPOTIFY_CLIENT_ID"
+    private const val CLIENT_ID = "your_spotify_client_id_here" // TODO: Replace with actual Spotify client ID
     private const val REDIRECT_URI = "com.example.coffeecounter://auth"
     
     private var spotifyAppRemote: SpotifyAppRemote? = null
