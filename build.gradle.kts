@@ -5,14 +5,14 @@ buildscript {
         gradlePluginPortal()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:8.0.2")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.22")
-        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.7.0")
+        classpath("com.android.tools.build:gradle:8.1.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.7.3")
     }
 }
 
 plugins {
-    id("com.google.devtools.ksp") version "1.8.22-1.0.11" apply false
+    id("com.google.devtools.ksp") version "1.9.0-1.0.13" apply false
 }
 
 allprojects {
