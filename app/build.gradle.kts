@@ -6,6 +6,10 @@ plugins {
     id("com.google.devtools.ksp")
 }
 
+configurations.all {
+    exclude(group = "com.android.support")
+}
+
 android {
     namespace = "com.example.coffeecounter"
     compileSdk = 34
@@ -68,9 +72,14 @@ dependencies {
     implementation("androidx.room:room-ktx:2.5.2")
     kapt("androidx.room:room-compiler:2.5.2")
 
-    // Spotify
-    implementation("com.spotify.android:auth:2.0.2")
-    implementation("com.spotify.android:app-remote:0.8.0")
+    // Spotify with AndroidX support and exclusions
+    implementation("com.spotify.android:auth:2.1.0") {
+        exclude(group = "com.android.support", module = "support-annotations")
+        exclude(group = "com.android.support", module = "support-compat")
+    }
+    implementation("com.spotify.android:app-remote:0.8.1") {
+        exclude(group = "com.android.support")
+    }
 
     // Testing (minimal)
     testImplementation("junit:junit:4.13.2")
