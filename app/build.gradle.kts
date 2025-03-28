@@ -2,6 +2,8 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
+    id("androidx.navigation.safeargs.kotlin")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -10,8 +12,8 @@ android {
 
     defaultConfig {
         applicationId = "com.example.coffeecounter"
-        minSdk = 26
-        targetSdk = 34
+        minSdk = 23  // Android 6.0 (covers 99%+ devices)
+        targetSdk = 34  // Latest Android version
         versionCode = 1
         versionName = "1.0"
 
@@ -40,6 +42,7 @@ android {
     buildFeatures {
         compose = true
         viewBinding = true
+        dataBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.7"
