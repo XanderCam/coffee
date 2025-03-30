@@ -67,10 +67,13 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.3")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.3")
 
+    // Core AndroidX
+    implementation("androidx.annotation:annotation:1.7.1")
+    
     // Room Database
-    implementation("androidx.room:room-runtime:2.5.2")
-    implementation("androidx.room:room-ktx:2.5.2")
-    kapt("androidx.room:room-compiler:2.5.2")
+    implementation("androidx.room:room-runtime:2.6.0")
+    implementation("androidx.room:room-ktx:2.6.0")
+    kapt("androidx.room:room-compiler:2.6.0")
 
     // Spotify with AndroidX support and exclusions
     implementation("com.spotify.android:auth:2.1.0") {
