@@ -43,5 +43,8 @@ jobs:
       with:
         name: build-outputs
         path: |
-          app/build/outputs/
+          app/build/outputs/apk/
+          app/build/outputs/aar/
+          app/build/outputs/mapping/
           app/build/reports/
+          app/build/logs/
