@@ -17,7 +17,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.coffee"
+        applicationId = "com.example.coffeecounter"
         minSdk = 23
         targetSdk = 34
         versionCode = 1
