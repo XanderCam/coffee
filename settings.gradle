@@ -17,6 +17,5 @@ dependencyResolutionManagement {
 rootProject.name = "CoffeeCounter"
 include ':app'
 include ':feature-phone'
-include ':feature-tablet'
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
