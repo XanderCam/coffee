@@ -14,8 +14,8 @@ dependencyResolutionManagement {
         maven {
             url = uri("https://maven.pkg.github.com/spotify/android-sdk")
             credentials {
-                username = project.findProperty("GITHUB_USER") ?: System.getenv("GITHUB_USER")
-                password = project.findProperty("GITHUB_TOKEN") ?: System.getenv("GITHUB_TOKEN")
+                username = System.getenv("GITHUB_USER") ?: providers.gradleProperty("GITHUB_USER").orNull
+                password = System.getenv("GITHUB_TOKEN") ?: providers.gradleProperty("GITHUB_TOKEN").orNull
             }
         }
         maven {
@@ -27,5 +27,6 @@ dependencyResolutionManagement {
 rootProject.name = "CoffeeCounter"
 include ':app'
 include ':feature-phone'
+include ':common'
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
