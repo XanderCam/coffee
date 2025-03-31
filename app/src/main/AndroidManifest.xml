@@ -32,7 +32,9 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <!-- Spotify Redirect Receiver -->
-        <activity android:name=".SpotifyRedirectActivity">
+        <activity 
+            android:name=".SpotifyRedirectActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
