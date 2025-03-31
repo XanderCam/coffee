@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="padding_small">16dp</dimen>
+    <dimen name="padding_medium">32dp</dimen>
+    <dimen name="text_size_medium">24sp</dimen>
+</resources>
