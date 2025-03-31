@@ -21,12 +21,26 @@ jobs:
 
     - name: Setup Android SDK
       uses: android-actions/setup-android@v2
+      with:
+        api-level: 34
+        build-tools-version: 34.0.0
+        ndk-version: 25.2.9519653
+        cmake-version: 3.22.1
       
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+
+    - name: List Android SDK components
+      run: sdkmanager --list
       
-    - name: Build with Gradle
-      run: ./gradlew build
+    - name: Build with Gradle (debug)
+      run: ./gradlew assembleDebug --stacktrace
+      
+    - name: Build with Gradle (release)
+      run: ./gradlew assembleRelease --stacktrace
+      
+    - name: Run tests
+      run: ./gradlew test --stacktrace
       
     - name: Upload build artifacts
       if: ${{ always() }}
@@ -36,3 +50,4 @@ jobs:
         path: |
           **/build/outputs/
           **/build/reports/
+          **/build/logs/
