@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="coffee_quotes">
+        <item>But first, coffee</item>
+        <item>Life happens, coffee helps</item>
+        <item>Rise and grind</item>
+        <item>Coffee: because adulting is hard</item>
+        <item>I like my coffee like I like my mornings: dark and quiet</item>
+        <item>Espresso yourself</item>
+        <item>May your coffee be strong and your Monday be short</item>
+    </string-array>
+    <string-array name="taunt_messages">
+        <item>Slow down there, coffee cowboy!</item>
+        <item>That\'s enough caffeine for one day!</item>
+        <item>Your heart might explode!</item>
+        <item>Maybe switch to decaf?</item>
+        <item>You\'re going to be awake for days!</item>
+    </string-array>
+    <string name="add_cup">Add Cup</string>
+    <string name="app_name">Coffee Counter</string>
+    <string name="connect_spotify">Connect Spotify</string>
+    <string name="cup_count_format">%d</string>
+    <string name="cups_today">cups today</string>
+    <string name="history_title">Your Coffee History</string>
+    <string name="monthly">Monthly</string>
+    <string name="music_title">Coffee Tunes</string>
+    <string name="no_track_playing">No track playing</string>
+    <string name="pause">Pause</string>
+    <string name="play">Play</string>
+    <string name="reset">Reset</string>
+    <string name="tip_icon">Coffee tip icon</string>
+    <string name="title_history">History</string>
+    <string name="title_home">Counter</string>
+    <string name="title_music">Music</string>
+    <string name="title_tips">Tips</string>
+    <string name="weekly">Weekly</string>
+</resources>
