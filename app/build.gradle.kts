@@ -16,8 +16,8 @@ android {
 
     defaultConfig {
         applicationId = "com.example.coffeecounter"
-        minSdk = 23  // Android 6.0 (covers 99%+ devices)
-        targetSdk = 34  // Latest Android version
+        minSdk = 23
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -74,15 +74,6 @@ dependencies {
     implementation("androidx.room:room-runtime:2.6.0")
     implementation("androidx.room:room-ktx:2.6.0")
     kapt("androidx.room:room-compiler:2.6.0")
-
-    // Spotify with AndroidX support and exclusions
-    implementation("com.spotify.android:auth:2.1.0") {
-        exclude(group = "com.android.support", module = "support-annotations")
-        exclude(group = "com.android.support", module = "support-compat")
-    }
-    implementation("com.spotify.android:app-remote:0.8.1") {
-        exclude(group = "com.android.support")
-    }
 
     // Testing (minimal)
     testImplementation("junit:junit:4.13.2")
