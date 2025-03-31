@@ -76,9 +76,9 @@ dependencies {
     implementation("androidx.room:room-ktx:2.6.0")
     kapt("androidx.room:room-compiler:2.6.0")
 
-    // Spotify SDK (latest stable version)
-    implementation("com.spotify.android:auth:2.0.2") // Note: Newer auth library
-    implementation("com.spotify.android:appremote:1.3.0") // Note: Newer compatible version
+    // Spotify SDK
+    implementation("com.spotify.android:auth:2.0.2")
+    implementation("com.spotify.android:appremote:1.2.3") // Version confirmed available in public repos
 
     // Testing (minimal)
     testImplementation("junit:junit:4.13.2")
