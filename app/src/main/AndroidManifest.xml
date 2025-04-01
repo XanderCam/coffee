@@ -24,31 +24,6 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="spotify" />
-            </intent-filter>
-        </activity>
-
-        <!-- Spotify Auth Activity -->
-        <activity
-            android:name="com.spotify.sdk.android.auth.LoginActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-        <!-- Spotify Redirect Receiver -->
-        <activity 
-            android:name=".SpotifyRedirectActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data
-                    android:scheme="${applicationId}"
-                    android:host="auth" />
-            </intent-filter>
         </activity>
     </application>
 </manifest>
