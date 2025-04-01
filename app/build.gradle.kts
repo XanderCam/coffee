@@ -76,9 +76,10 @@ dependencies {
     implementation("androidx.room:room-ktx:2.6.0")
     kapt("androidx.room:room-compiler:2.6.0")
 
-    // Spotify SDK
-    implementation("com.spotify.android:auth:2.0.2")
-    implementation("com.spotify.android:appremote:1.2.3") // Version confirmed available in public repos
+    // Web API
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
 
     // Testing (minimal)
     testImplementation("junit:junit:4.13.2")
