@@ -21,6 +21,8 @@ jobs:
 
     - name: Setup Android SDK
       uses: android-actions/setup-android@v2
+      with:
+        android-sdk-file: local.properties
       
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
