@@ -12,11 +12,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven {
-            url = uri("https://maven.pkg.github.com/spotify/android-sdk")
-            credentials {
-                username = System.getenv("GITHUB_USER") ?: providers.gradleProperty("GITHUB_USER").orNull
-                password = System.getenv("GITHUB_TOKEN") ?: providers.gradleProperty("GITHUB_TOKEN").orNull
-            }
+            url = uri("https://maven.spotify.com/repository/public/")
         }
         maven {
             url = uri("https://jitpack.io")
