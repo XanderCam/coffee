@@ -5,6 +5,7 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+<<<<<<< HEAD
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -14,3 +15,23 @@ dependencyResolutionManagement {
 }
 rootProject.name = "CoffeeCounter"
 include ':app'
+=======
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url = uri("https://jitpack.io")
+        }
+    }
+}
+
+rootProject.name = "CoffeeCounter"
+include ':app'
+include ':feature-phone'
+include ':common'
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+>>>>>>> fae5d5e317e5121619327069e562d77968bff488
