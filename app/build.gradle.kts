@@ -13,6 +13,12 @@ android {
     defaultConfig {
         applicationId = "com.example.coffeecounter"
         minSdk = 23
+        manifestPlaceholders.putAll(
+            mapOf(
+                "redirectHostName" to "localhost",
+                "redirectSchemeName" to "coffee" 
+            )
+        )
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -28,12 +34,35 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = "11"
+        freeCompilerArgs = freeCompilerArgs + listOf(
+            "-Xjvm-default=all"
+        )
     }
+    
+    kotlin {
+        jvmToolchain(17) // Use Java 17 toolchain
+    }
+    
+    kapt {
+        useBuildCache = true
+        javacOptions {
+            option("--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED")
+            option("--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED") 
+            option("--add-exports=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED")
+            option("--add-exports=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED")
+            option("--add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED")
+            option("--add-exports=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED")
+            option("--add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED")
+            option("--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED")
+            option("--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED")
+        }
+    }
+    
     buildFeatures {
         viewBinding = true
     }
