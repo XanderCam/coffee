@@ -7,7 +7,6 @@ A native Android app that tracks your daily coffee consumption with fun features
 - Glass effect UI with custom background
 - Consumption history
 - Coffee drink recommendations
-- Spotify integration for coffee-themed music
 
 ## Features
 
@@ -19,7 +18,6 @@ A native Android app that tracks your daily coffee consumption with fun features
 
 ### Additional Features
 - **Coffee Tips**: Discover new coffee drinks
-- **Spotify Integration**: Play coffee-themed playlists
 - **Beautiful UI**: Glass morphism design with custom background
 
 ## Technical Details
@@ -36,14 +34,12 @@ A native Android app that tracks your daily coffee consumption with fun features
   - LiveData
   - Room Database
   - Navigation Component
-- Spotify SDK
 - MPAndroidChart
 
 ## Setup Instructions
 
 ### Prerequisites
 - Android Studio (latest version)
-- Spotify Developer Account
 - Physical device or emulator with Android 8.0+
 
 ### Configuration Steps
@@ -55,15 +51,8 @@ A native Android app that tracks your daily coffee consumption with fun features
 3. Get Spotify Client ID:
    - Create app at [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/)
    - Note your Client ID
-4. Add Client ID:
-   - Open `SpotifyManager.kt`
-   - Replace `your_spotify_client_id_here` with your actual ID
-5. Build and run the app
+4. Build and run the app
 
-### Spotify Setup
-1. Ensure you have Spotify app installed on your test device
-2. Log in with a Premium account
-3. Grant permissions when prompted
 
 ## Screenshots
 | Main Screen | History | Tips | Music |
