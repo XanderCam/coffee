@@ -16,7 +16,7 @@ import java.util.*
 
 class HistoryFragment : Fragment() {
     private var _binding: FragmentHistoryBinding? = null
-    private val binding get() = _binding ?: throw IllegalStateException("Binding accessed after destruction")
+    private val binding get() = _binding!!
     private val viewModel: CupCounterViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -30,7 +30,6 @@ class HistoryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         setupChart()
         observeData()
     }
@@ -54,7 +53,7 @@ class HistoryFragment : Fragment() {
     }
 
     private fun observeData() {
-        viewModel.repository.getWeeklyHistory().observe(viewLifecycleOwner) { entries ->
+        viewModel.getWeeklyHistory().observe(viewLifecycleOwner) { entries ->
             val barEntries = entries.mapIndexed { index, entry ->
                 BarEntry(
                     index.toFloat(),
