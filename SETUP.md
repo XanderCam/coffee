@@ -17,3 +17,4 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 ## Cloud Building
 This project is configured for GitHub Actions CI/CD
+- Last build triggered: $(date +"%Y-%m-%d %H:%M:%S")
