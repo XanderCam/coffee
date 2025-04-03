@@ -16,8 +16,8 @@ import java.util.*
 
 class HistoryFragment : Fragment() {
     private var _binding: FragmentHistoryBinding? = null
-    private val binding get() = _binding!!
-    private lateinit var viewModel: CupCounterViewModel
+    private val binding get() = _binding ?: throw IllegalStateException("Binding accessed after destruction")
+    private val viewModel: CupCounterViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
