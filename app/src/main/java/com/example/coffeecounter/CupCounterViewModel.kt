@@ -7,7 +7,9 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import java.util.*
 
-class CupCounterViewModel(private val repository: HistoryRepository) : ViewModel() {
+class CupCounterViewModel(
+    private val repository: HistoryRepository
+) : ViewModel() {
     private val _cupCount = MutableLiveData(0)
     val cupCount: LiveData<Int> = _cupCount
 

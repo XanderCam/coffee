@@ -15,7 +15,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewModel = ViewModelProvider(this)[CupCounterViewModel::class.java]
+        val repository = HistoryRepository(
+            AppDatabase.getDatabase(this).historyDao()
+        )
+        viewModel = ViewModelProvider(
+            this,
+            object : ViewModelProvider.Factory {
+                override fun <T : ViewModel> create(modelClass: Class<T>): T {
+                    return CupCounterViewModel(repository) as T
+                }
+            }
+        )[CupCounterViewModel::class.java]
 
         setupUI()
         observeViewModel()
