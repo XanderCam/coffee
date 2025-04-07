@@ -10,6 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.coffeecounter"
+        namespace = "com.example.coffeecounter"
         minSdk = 24
         manifestPlaceholders.putAll(
             mapOf(
