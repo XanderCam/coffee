@@ -1,6 +1,6 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.android") version "1.9.22"
     id("kotlin-kapt")
 }
 
@@ -10,14 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.coffeecounter"
-        namespace = "com.example.coffeecounter"
         minSdk = 24
-        manifestPlaceholders.putAll(
-            mapOf(
-                "redirectHostName" to "localhost",
-                "redirectSchemeName" to "coffee"
-            )
-        )
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -39,10 +32,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "17"
-        freeCompilerArgs = freeCompilerArgs + listOf(
+        freeCompilerArgs = listOf(
             "-Xjvm-default=all",
-            "-opt-in=kotlin.RequiresOptIn",
-            "-language-version", "1.9"
+            "-opt-in=kotlin.RequiresOptIn"
         )
     }
     
@@ -71,11 +63,6 @@ dependencies {
     
     // Charting library
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
-    
-    // Web API
-    implementation("com.squareup.retrofit2:retrofit:2.11.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.12")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
