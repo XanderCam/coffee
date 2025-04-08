@@ -1,6 +1,7 @@
 package com.example.coffeecounter
 
 import android.os.Bundle
+import com.example.coffeecounter.data.AppDatabase
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

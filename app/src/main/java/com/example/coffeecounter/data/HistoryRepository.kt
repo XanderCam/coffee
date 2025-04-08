@@ -1,6 +1,7 @@
 package com.example.coffeecounter.data
 
 import androidx.lifecycle.LiveData
+import java.util.Date
 
 class HistoryRepository(private val historyDao: HistoryDao) {
 
