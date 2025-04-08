@@ -1,5 +1,6 @@
-package com.example.coffee
+package com.example.coffeecounter
 
+import com.example.coffeecounter.R
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

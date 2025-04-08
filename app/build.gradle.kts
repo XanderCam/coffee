@@ -41,12 +41,14 @@ android {
         jvmTarget = "17"
         freeCompilerArgs = freeCompilerArgs + listOf(
             "-Xjvm-default=all",
-            "-opt-in=kotlin.RequiresOptIn"
+            "-opt-in=kotlin.RequiresOptIn",
+            "-language-version", "1.9"
         )
     }
     
     kapt {
         useBuildCache = true
+        correctErrorTypes = true
     }
     
     buildFeatures {

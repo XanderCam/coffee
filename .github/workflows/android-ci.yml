@@ -24,8 +24,10 @@ jobs:
       
     - name: Accept Android licenses
       run: |
-        yes | sdkmanager --licenses || true
+        mkdir -p ~/.android
+        touch ~/.android/repositories.cfg
+        yes | sdkmanager --licenses >/dev/null 2>&1 || true
         ./gradlew --version
         
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew build --stacktrace --no-daemon
