@@ -30,14 +30,7 @@
     <string name="title_home">Counter</string>
     <string name="title_history">History</string>
     <string name="title_tips">Tips</string>
-    <string name="title_music">Music</string>
-
-    <!-- Music Fragment -->
-    <string name="music_title">Coffee Tunes</string>
-    <string name="connect_spotify">Connect Spotify</string>
-    <string name="play">Play</string>
-    <string name="pause">Pause</string>
-    <string name="no_track_playing">No track playing</string>
+    
     <string name="tip_icon">Coffee tip icon</string>
     <string name="weekly">Weekly</string>
     <string name="monthly">Monthly</string>

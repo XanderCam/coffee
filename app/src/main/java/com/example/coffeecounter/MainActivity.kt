@@ -2,6 +2,7 @@ package com.example.coffeecounter
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.coffeecounter.databinding.ActivityMainBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder

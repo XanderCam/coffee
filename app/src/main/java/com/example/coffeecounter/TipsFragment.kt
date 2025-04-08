@@ -31,7 +31,7 @@ class TipsFragment : Fragment() {
 
         val tipsList = listOf(
             Tip("Grind Size Matters", "Use a coarser grind for French press and finer for espresso"),
-            Tip("Water Temperature", "Optimal brewing temperature is between 195°F and 205°F"),
+            Tip("Water Temperature", "Optimal brewing temperature is between 195°F (90°C) and 205°F (96°C)"),
             Tip("Brewing Time", "4 minutes is ideal for most manual brewing methods")
         )
 

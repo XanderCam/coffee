@@ -12,8 +12,5 @@ class CoffeeCounterApplication : Application() {
         super.onCreate()
         // Initialize quote manager with application context
         QuoteManager.initialize(this)
-        
-        // Initialize Spotify configuration
-        SpotifyManager.initialize(this)
     }
 }
