@@ -9,12 +9,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 
-data class CoffeeTip(
-    val name: String,
-    val description: String,
-    val iconRes: Int
-)
-
 class CoffeeTipsAdapter : ListAdapter<CoffeeTip, CoffeeTipsAdapter.CoffeeTipViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoffeeTipViewHolder {
