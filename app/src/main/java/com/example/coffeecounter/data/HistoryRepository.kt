@@ -26,4 +26,8 @@ class HistoryRepository(private val historyDao: HistoryDao) {
     fun getTotalCountSince(date: Date): LiveData<Int> {
         return historyDao.getTotalCountSince(date)
     }
+
+    suspend fun saveDailyCount(count: Int) {
+        historyDao.insert(HistoryEntry(date = Date(), count = count))
+    }
 }

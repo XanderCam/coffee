@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.coffeecounter.data.HistoryEntry
 import kotlinx.coroutines.launch
 import java.util.*
 
@@ -57,5 +58,11 @@ class CupCounterViewModel(
 
     private fun loadInitialQuote() {
         _currentQuote.value = QuoteManager.getRandomQuote()
+    }
+
+    fun getWeeklyHistory(): LiveData<List<HistoryEntry>> {
+        val calendar = Calendar.getInstance()
+        calendar.add(Calendar.DAY_OF_YEAR, -7)
+        return repository.getEntriesAfterDate(calendar.time)
     }
 }

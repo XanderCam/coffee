@@ -1,6 +1,22 @@
 # Basic ProGuard rules for Android projects
--keep class com.example.coffee.** { *; }
--keepclassmembers class com.example.coffee.** { *; }
+-keep class com.example.coffeecounter.** { *; }
+-keepclassmembers class com.example.coffeecounter.** { *; }
+
+# Room database rules
+-keep class * extends androidx.room.RoomDatabase
+-keep class * extends androidx.room.Entity 
+-keep class * extends androidx.room.Dao
+-keepclassmembers class * {
+    @androidx.room.* *;
+}
+
+# MPAndroidChart rules
+-keep class com.github.mikephil.charting.** { *; }
+-keep interface com.github.mikephil.charting.** { *; }
+
+# Material Components rules  
+-keep class com.google.android.material.** { *; }
+-keep interface com.google.android.material.** { *; }
 
 # Keep View bindings
 -keepclassmembers class * extends android.view.View {
