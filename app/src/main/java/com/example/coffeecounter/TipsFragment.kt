@@ -29,13 +29,13 @@ class TipsFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.setHasFixedSize(true)
 
-        val tipsList = listOf(
-            Tip("Grind Size Matters", "Use a coarser grind for French press and finer for espresso"),
-            Tip("Water Temperature", "Optimal brewing temperature is between 195°F (90°C) and 205°F (96°C)"),
-            Tip("Brewing Time", "4 minutes is ideal for most manual brewing methods")
+        val coffeeTips = listOf(
+            CoffeeTip("Grind Size", "Use coarser grind for French press", R.drawable.ic_coffee_cup),
+            CoffeeTip("Water Temp", "195°F-205°F is ideal", R.drawable.ic_americano),
+            CoffeeTip("Brew Time", "4 minutes for best extraction", R.drawable.ic_espresso)
         )
 
-        tipsAdapter = TipsAdapter(tipsList)
+        tipsAdapter = TipsAdapter(coffeeTips)
         recyclerView.adapter = tipsAdapter
     }
 }
